@@ -1,0 +1,90 @@
+.flex{
+    display: flex;
+}
+.bg-test{
+    background-color: red;
+}
+.color-black{
+    color: black;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.border{
+    border: 2px solid red;
+}
+.bg-16{
+    background-color: rgb(16, 16, 16);
+}
+.bg-grey{
+    background-color: #121212;
+}
+.bg-black{
+    background-color: black;
+}
+.gap{
+    gap:10px
+}
+.rounded{
+    border-radius: 7px;
+}
+.m2{
+    margin: 5px;
+}
+.p1{
+    padding: 10px;
+}
+.p2{
+    padding: 20px;
+}
+.color-grey{
+    color: rgb(179, 179, 179);
+}
+.width-required{
+    width: fit-content;
+}
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  /* Track (background) */
+  ::-webkit-scrollbar-track {
+    background: #333; /* Dark grey */
+  }
+  
+  /* Handle (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: #666; /* Grey */
+    border-radius: 6px; /* Roundness of the thumb */
+    border: 3px solid #333; /* Match the track color */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Light grey */
+  }
+  .hidden{
+    display: none;
+  }
+  .invert{
+    filter: invert(100%);
+   
+  }
+
+
+
+
+/* 
+  <li> <div Class="flex gap"><img src="img/music.svg" Class="invert" alt="">
+    <div class="songinfo flex "><div class="songname">${songdata.split("_")[0]}</div><div class="artist">${songdata.split("_")[1]}</div></div></div>
+<img src="img/playnow.png" class="invert" style="width: 25px; height: 25px;" alt=""></li> 
+
+
+
+current_song=(e.getElementsByTagName("div")[1].firstElementChild.innerHTML+"_"+e.getElementsByTagName("div")[1].getElementsByTagName("div")[1].innerHTML);*/

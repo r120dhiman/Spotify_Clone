@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap');
+    </style>
+    <link rel="shortcut icon" href="spotify/img/icon/icon48px.ico" type="image/x-icon">
+    <link rel="stylesheet" href="spotify/style.css">
+    <link rel="stylesheet" href="spotify/utility.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="content bg-black">
+        <div class="left bg-black" id="left">
+
+            <div class="home bg-grey rounded m2 p1">
+                <img src="spotify/img/logo.svg" alt="">
+                <ul>
+                    <li class="flex color-grey"><img src="spotify/img/home.svg" alt="home">Home</li>
+                    <li class="flex color-grey"><img src="spotify/img/search.svg" alt="Search icon">Search</li>
+                </ul>
+            </div>
+            <div class="mainlibrary">
+                <div class="library bg-grey rounded m2 p1 gap ">
+                    <div class=" head p1">
+                        <!-- <div class="insidehead flex"> -->
+                        <div class="heading flex align-center gap color-grey">
+                            <img src="spotify/img/platlist.svg" alt="">
+                            <h3 class="color-grey">Your library </h3>
+                            <img src="spotify/img/plus.svg" alt="">
+                        </div>
+                        <!-- </div> -->
+                        <div class="songlist " id="ul">
+                            <ul id="inul">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer flex p2 ">
+
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/legal/" id="">
+                            <span class="color-grey">Legal</span>
+                        </a>
+                    </div>
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/safetyandprivacy/" id="">
+                            <span class="color-grey ">Safety &amp; Privacy Center</span>
+                        </a>
+                    </div>
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="">
+                            <span class="color-grey ">Privacy Policy</span>
+                        </a>
+                    </div>
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="">
+                            <span class="color-grey ">Cookies</span>
+                        </a>
+                    </div>
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="">
+                            <span class="color-grey ">About Ads</span>
+                        </a>
+                    </div>
+                    <div class="required-width">
+                        <a href="https://www.spotify.com/in-en/accessibility/" id="">
+                            <span class="color-grey ">Accessibility</span>
+                        </a>
+                    </div>
+                    <a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                        rel="noopener">
+                        <span class="color-grey ">Cookies</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="right  justify-center ">
+            <div class="header flex p2 bg-grey rounded">
+                <div class="hamburger">
+                    <img src="spotify/img/hamburger.png" id="hamburgerimg">
+                    <img src="spotify/img/close.png" id="cross" class="hidden">
+                </div>
+
+                <div class="arrow flex "><img src="spotify/img/left.svg" alt="">
+                    <img src="spotify/img/right.svg" alt="">
+                </div>
+                <div class="login flex ">
+                    <button class=" bg-16 p1 btn signupbtn">Sign Up</button>
+                    <button class="color-black p1 btn loginbtn">Log In</button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h1 class="p1">Spotify Playlists</h1>
+                <div class="card-container flex gap m1 justify-center">
+
+
+                </div>
+            </div>
+            <div class="playbar rounded  flex justify-center ">
+                <div class="seekbar ">
+                    <div class="circle"></div>
+                </div>
+                <div class="btns flex ">
+                    <div class="songinformation"></div>
+                    <div class="btnsinner flex ">
+                        <img src="spotify/img/previous.svg" id="previous" class=" controls" alt="Button for the previous song">
+                        <div class="playpose">
+                            <img src="spotify/img/playbar.svg" id="play" class=" controls" alt="Button for play and pose">
+                            <img src="spotify/img/pause.svg" class="hidden controls" id="pause"
+                                alt="Pause button for play or pause song">
+                        </div>
+
+                        <img src="spotify/img/next.svg" id="next" class=" controls" alt="Button for the next song">
+                    </div>
+                    <div class="timevol flex gap">
+                        <div class="songtime flex"></div>
+                        
+                        <div class="sound flex">
+                            <div class="volimg">
+                                <img src="spotify/img/mute.png" id="mute" class="invert hidden" alt="">
+                                <img src="spotify/img/volup.png" id="volup" class="invert" alt="">
+                            </div>
+                            <input type="range" class="range" id="range" width="60px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="spotify/script.js"></script>
+</body>
+
+</html>
