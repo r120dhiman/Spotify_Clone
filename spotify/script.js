@@ -25,7 +25,7 @@ async function getsongs(folder) {
 
 
   list = [];
-  let a = await fetch(`http://127.0.0.1:3000/spotify/${currfolder}`);
+  let a = await fetch(`/spotify/${currfolder}`);
   let response = await a.text();
   let data = document.createElement("div");
   data.innerHTML = response;
@@ -75,7 +75,7 @@ const playmusic = (sname) => {
 }
 async function load() {
   let cardcontainer = document.querySelector(".card-container");
-  let a = await fetch(`http://127.0.0.1:3000/spotify/songs/`);
+  let a = await fetch(`/spotify/songs/`);
   let response = await a.text();
   let data = document.createElement("div");
   data.innerHTML = response;
@@ -85,14 +85,14 @@ async function load() {
   let array = Array.from(anchor);
   for (let index = 0; index < array.length; index++) {
     const e = array[index];
-    if (e.href.includes("http://127.0.0.1:3000/spotify/songs/") && !e.href.includes(".htaccess")) {
+    if (e.href.includes("/spotify/songs/") && !e.href.includes(".htaccess")) {
       let folderdata = e.href.split("/").slice(-2)[0];
-      let a = await fetch(`http://127.0.0.1:3000/spotify/songs/${folderdata}/info.json`);
+      let a = await fetch(`/spotify/songs/${folderdata}/info.json`);
       let response = await a.json();
       cardcontainer.innerHTML = cardcontainer.innerHTML + `<div  class="card-body ">
    <div data-folder="${folderdata}" class="card p1">
        <div class="play flex align-center justify-center"><img src="spotify/img/play.svg"></div>
-       <img src="http://127.0.0.1:3000/spotify/songs/${folderdata}/cover.jpeg" alt="">
+       <img src="/spotify/songs/${folderdata}/cover.jpeg" alt="">
        <h3>${response.title}</h3>
        <p>${response.description}</p>
    </div>
@@ -164,7 +164,7 @@ async function main() {
   )
   //next an dprevious btns
   next.addEventListener("click", async () => {
-    let a = await fetch(`http://127.0.0.1:3000/spotify/${currfolder}`);
+    let a = await fetch(`/spotify/${currfolder}`);
     let response = await a.text();
     let data = document.createElement("div");
     data.innerHTML = response;
@@ -191,7 +191,7 @@ async function main() {
   }
   )
   previous.addEventListener("click", async() => {
-    let a = await fetch(`http://127.0.0.1:3000/spotify/${currfolder}`);
+    let a = await fetch(`/spotify/${currfolder}`);
   let response = await a.text();
   let data = document.createElement("div");
   data.innerHTML = response;
